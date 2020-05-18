@@ -1,11 +1,10 @@
 import sys
-from datetime import datetime
 
+from lib.datestring import formatted_date_time
 from lib.get_test_files import get_test_files
 from lib.run import run
 
 path = sys.argv[0][0:-7]
-formatted_date_time = datetime.now().strftime("%Y-%m-%d--%H-%M-%S")
 out_file_name = 'output_{}.csv'.format(formatted_date_time)
 file = open(path + out_file_name, "x")
 
